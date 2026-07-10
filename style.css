@@ -1,0 +1,253 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    height: 100vh;
+    background-image: linear-gradient(
+        135deg,
+        #1b2157 0%,
+        #2d66c3 45%,
+        #35d4dd 100%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow: hidden;
+}
+
+.background{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    z-index: -1;
+}
+
+.blob{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    animation: float 12s ease-in-out infinite;
+}
+
+.blob1{
+    width:350px;
+    height:350px;
+    
+    background:#ff4ec7;
+    
+    bottom:-100px;
+    left:-50px;
+}
+
+.blob2{
+    width:300px;
+    height:300px;
+    
+    background:#00d9ff;
+    
+    top:-50px;
+    right:-50px;
+}
+
+.blob3{
+    width:250px;
+    height:250px;
+    
+    background:#6d6bff;
+    
+    bottom:100px;
+    right:300px;
+}
+
+.circle{
+    position: absolute;
+    border-radius: 50%;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter: blur(5px);
+    animation: float 12s ease-in-out infinite;
+}
+
+.c1{
+    width:170px;
+    height:170px;
+    
+    top:50px;
+    left:30px;
+}
+
+.c2{
+    width:220px;
+    height:220px;
+    
+    right:120px;
+    top:250px;
+}
+
+.c3{
+    width:260px;
+    height:260px;
+    
+    bottom:-50px;
+    right:60px;
+}
+
+@keyframes float{
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(60px , -45px);
+    }
+    100%{
+        transform:translate(0,0);
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.11);
+    border-radius: 30px;
+    backdrop-filter: blur(18px);
+    border: solid 1px rgb(255,255,255,0.2);
+    box-shadow: 0 15px 40px rgb(0,0,0,0.18);
+
+    width: min(450px, 90%);
+    padding: 30px 40px;
+    
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 740px){
+    .container{
+        padding: 25px 15px;
+    }
+}
+
+.timerheading{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.mainheading{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mainheading h1{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.mainheading img{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.timerheading p{
+    font-size: 0.5rem;
+    color: rgba(248, 247, 247, 0.763);
+}
+
+.timer{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.timebox{
+    min-width: 50px;
+    font-weight: 600;
+    padding: 0.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.timebox p{
+    font-size: 0.5rem;
+}
+
+.colon{
+    font-size: 2rem;
+}
+
+.progress-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 260px;
+    padding: 1rem 0rem;
+    gap: 0.3rem;
+    font-size: 0.7rem;
+}
+
+.progress-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.progressbar{
+    width: 100%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgb(225,225,225,0.2);;
+    height: 6px;
+    border-radius: 10px;
+}
+
+.progress{
+    width: 75%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #00d9ff;
+    transition: width 1s linear;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-around;
+}
+
+.controls input{
+    padding: 0.1rem 0.05rem;
+    outline:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.15);
+    color:white;
+    font-size:0.7rem;
+}
+
+.controls input::placeholder{
+    color:rgba(255,255,255,.6);
+}
+
+.controls button{
+    padding: 0.3rem 0.5rem;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:0.7rem;
+    font-weight:500;
+    color:white;
+
+    background: linear-gradient(
+        135deg,
+        #00D2FF,
+        #3A7BFF
+    );
+}

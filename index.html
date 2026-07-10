@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+        <div class="circle c3"></div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="timerheading">
+            <div class="mainheading">
+                <img src="stopwatch.png" alt="">
+                <h1>Countdown Timer</h1>
+            </div>
+            <p>Set your time and start the countdown</p>
+        </div>
+
+        <div class="timer">
+
+            <div class="timebox">
+                <div> <span class="time" id="days">00</span> </div>
+                <p>Days</p>
+            </div>
+
+            <p class="colon">:</p>
+
+            <div class="timebox">
+                <div> <span class="time" id="hours">00</span> </div>
+                <p>Hours</p>
+            </div>
+
+            <p class="colon">:</p>
+
+            <div class="timebox">
+                <div> <span class="time" id="minutes">00</span> </div>
+                <p>minutes</p>
+            </div>
+
+            <p class="colon">:</p>
+
+            <div class="timebox">
+                <div> <span class="time" id="seconds">00</span> </div>
+                <p>Seconds</p>
+            </div>
+
+        </div>
+
+        <div class="progress-container">
+
+            <div class="progress-text">
+                <p>progress:</p>
+                <div class="percentage" id="percentage">0%</div>
+            </div>
+            <div class="progressbar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+        </div>
+
+        <div class="controls">
+            <div class="settime">
+                <input type="date" id="dateinput">
+                <input type="time" id="timeinput">
+                <button id="startbtn">Start Timer</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
